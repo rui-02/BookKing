@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/grey"
+    tools:context=".ui.dashboard.DashboardFragment">
+
+    <EditText
+        android:id="@+id/輸入飯店名稱"
+        android:layout_width="233dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="65dp"
+        android:layout_marginTop="101dp"
+        android:layout_marginEnd="7dp"
+        android:background="@color/white"
+        android:ems="10"
+        android:hint="輸入飯店名稱"
+        android:inputType="textPersonName"
+        android:textColorHint="#545454"
+        app:layout_constraintEnd_toStartOf="@+id/search"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/search"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="7dp"
+        android:layout_marginTop="101dp"
+        android:layout_marginEnd="66dp"
+        android:background="@color/grey"
+        android:drawableStart="@drawable/search"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/輸入飯店名稱"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="189dp"
+        android:layout_marginTop="9dp"
+        android:layout_marginEnd="190dp"
+        android:text="或是"
+        android:textColor="#545454"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/輸入飯店名稱" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="157dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="158dp"
+        android:text="篩選條件"
+        android:textColor="#545454"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+    <Spinner
+        android:id="@+id/鄉鎮市區"
+        android:layout_width="140dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="19dp"
+        android:layout_marginTop="29dp"
+        android:layout_marginEnd="56dp"
+        android:background="@android:drawable/btn_dropdown"
+        android:spinnerMode="dialog"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/縣市"
+        app:layout_constraintTop_toBottomOf="@+id/textView3"
+        android:theme="@style/Theme.Design.NoActionBar"/>
+
+    <EditText
+        android:id="@+id/最高預算"
+        android:layout_width="140dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="17dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="56dp"
+        android:background="@color/white"
+        android:ems="10"
+        android:hint="最高預算"
+        android:inputType="numberDecimal"
+        android:textColorHint="#545454"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/最低預算"
+        app:layout_constraintTop_toBottomOf="@+id/退房日期" />
+
+    <Spinner
+        android:id="@+id/縣市"
+        android:layout_width="140dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="56dp"
+        android:layout_marginTop="29dp"
+        android:layout_marginEnd="19dp"
+        android:background="@android:drawable/btn_dropdown"
+        android:spinnerMode="dialog"
+        android:theme="@style/Theme.Design.NoActionBar"
+        app:layout_constraintEnd_toStartOf="@+id/鄉鎮市區"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView3"
+        tools:ignore="TouchTargetSizeCheck" />
+
+    <EditText
+        android:id="@+id/最低預算"
+        android:layout_width="140dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="58dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="17dp"
+        android:background="@color/white"
+        android:ems="10"
+        android:hint="最低預算"
+        android:inputType="numberDecimal"
+        android:textColorHint="#545454"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toStartOf="@+id/最高預算"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/入住日期" />
+
+    <EditText
+        android:id="@+id/人數"
+        android:layout_width="140dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="58dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="17dp"
+        android:background="@color/white"
+        android:ems="10"
+        android:hint="人數"
+        android:inputType="numberDecimal"
+        android:textColorHint="#545454"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toStartOf="@+id/評論分數"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/最低預算" />
+
+    <EditText
+        android:id="@+id/入住日期"
+        android:layout_width="140dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="58dp"
+        android:layout_marginTop="31dp"
+        android:layout_marginEnd="17dp"
+        android:background="@color/white"
+        android:ems="10"
+        android:hint="入住日期"
+        android:inputType="date"
+        android:textColorHint="#545454"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toStartOf="@+id/退房日期"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/縣市"
+        tools:ignore="Touch-targetSize check"/>
+
+    <EditText
+        android:id="@+id/退房日期"
+        android:layout_width="140dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="17dp"
+        android:layout_marginTop="31dp"
+        android:layout_marginEnd="56dp"
+        android:background="@color/white"
+        android:ems="10"
+        android:hint="退房日期"
+        android:inputType="date"
+        android:textColorHint="#545454"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/入住日期"
+        app:layout_constraintTop_toBottomOf="@+id/鄉鎮市區" />
+
+    <Spinner
+        android:id="@+id/評論分數"
+        android:layout_width="140dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="17dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="56dp"
+        android:background="@android:drawable/btn_dropdown"
+        android:spinnerMode="dialog"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/人數"
+        app:layout_constraintTop_toBottomOf="@+id/最高預算" />
+
+    <Button
+        android:id="@+id/button6"
+        android:layout_width="243dp"
+        android:layout_height="46dp"
+        android:layout_marginStart="84dp"
+        android:layout_marginTop="29dp"
+        android:layout_marginEnd="84dp"
+        android:background="@drawable/capsule"
+        android:backgroundTint="@color/yellow"
+        android:text="確定"
+        android:textColor="#545454"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/students" />
+
+    <CheckBox
+        android:id="@+id/students"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="58dp"
+        android:layout_marginTop="14dp"
+        android:layout_marginEnd="257dp"
+        android:text="學生優惠"
+        android:textColor="#545454"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/人數" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
